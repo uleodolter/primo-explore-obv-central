@@ -1,7 +1,38 @@
-# OBV Services - Primo New UI Central Package
+# OBV Central Package
 
+A Primo New UI customization package by OBVSG.
 
-##Package documentation
+## General notes
+
+This is WORK IN PROGRESS.
+
+## Installation
+
+The following instructions are intended for Unix-like operating systems.
+
+- Install [Primo Development Environment](https://github.com/ExLibrisGroup/primo-explore-devenv) unless already done.
+- Clone or download this repository into `primo-explore/custom/CENTRAL_PACKAGE` relative to root of primo-explore-devenv.
+
+## Building (running) the package
+
+```
+gulp run --view CENTRAL_PACKAGE --browserify
+```
+
+This package implements components which are not loaded by default.  You have to explicitly enable them in your view package.
+
+```
+cat primo-explore/custom/MY_VIEW/js/main.js
+
+angular.module('viewCustom', ['obvThumbnailLinks'])
+    .config(function (obvThumbnailLinksProvider) {
+        obvThumbnailLinksProvider.setConfig({ ft_label: { de_DE: 'Volltext Link' } });
+    });
+
+gulp run --view MY_VIEW --browserify
+```
+
+## Package documentation
 
 The development package allows you to configure :
 
@@ -26,15 +57,15 @@ The development package allows you to configure :
 - For each configuration type there is a specified folder in the custom package folder (that can be downloaded form your Primo Back Office)
 - In each folder you will find a specific README.md file with recipes/examples.
 
-  [CSS](./VIEW_CODE/css/README.md "css documentation")
+  [CSS](./css/README.md "css documentation")
 
-  [HTML](./VIEW_CODE/html/README.md "html documentation")
+  [HTML](./html/README.md "html documentation")
 
-  [Images](./VIEW_CODE/img/README.md "images documentation")
+  [Images](./img/README.md "images documentation")
 
-  [JavaScript](./VIEW_CODE/js/README.md "javascript documentation")
+  [JavaScript](./js/README.md "javascript documentation")
 
-##External documentation
+## External documentation
 
 Coding style of this package is based on multiple style guides.
 

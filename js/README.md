@@ -1,6 +1,5 @@
-# OBV Services - Primo New UI Central Package
+# OBV Central Package
 
-
-##JavaScript documentation
+## JavaScript documentation
 
 - TBD
