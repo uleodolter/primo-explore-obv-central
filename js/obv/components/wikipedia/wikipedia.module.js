@@ -6,7 +6,7 @@ import ObvWikipediaProvider from './wikipedia.provider';
 import ObvWikipediaComponent from './wikipedia.component';
 
 export const ObvWikipediaModule = angular
-    .module('obvWikipedia', [])
+    .module('obvWikipedia', ['obvFullView'])
         .provider('obvWikipedia', ObvWikipediaProvider)
         .component(ObvWikipediaComponent.selector, ObvWikipediaComponent)
         .config([ '$sceDelegateProvider', 'obvWikipediaProvider', ($sceDelegateProvider, obvWikipediaProvider) => {

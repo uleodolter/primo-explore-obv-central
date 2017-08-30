@@ -5,9 +5,9 @@
 import controller from './wikipedia.controller';
 
 const ObvWikipediaComponent = {
-    selector: 'prmFullViewAfter',
+    selector: 'obvWikipedia',
+    require: { prmFullViewAfter: '^prmFullViewAfter' },
     controller,
-    bindings: {parentCtrl: '<'},
     templateUrl: 'wikipedia.html',
 };
 

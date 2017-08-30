@@ -18,7 +18,8 @@ class ObvWikipediaController {
     $onInit() {
         let vm   = this;
         let conf = this.provider.getConfig();
-       
+      
+        this.parentCtrl = this.prmFullViewAfter.parentCtrl;
         /*
          * Get GND person identifiers from pnx.addata.field
          */ 

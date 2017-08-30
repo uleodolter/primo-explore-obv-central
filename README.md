@@ -24,7 +24,7 @@ This package implements components which are not loaded by default.  You have to
 ```
 cat primo-explore/custom/MY_VIEW/js/main.js
 
-angular.module('viewCustom', ['obvThumbnailLinks'])
+angular.module('viewCustom', ['obvThumbnailLinks', 'obvWikipedia', 'obvGoogleBooks'])
     .config(function (obvThumbnailLinksProvider) {
         obvThumbnailLinksProvider.setConfig({ ft_label: { de_DE: 'Volltext Link' } });
     });
