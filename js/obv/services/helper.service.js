@@ -3,6 +3,7 @@
  */
 
 class ObvHelperService {
+
     constructor($rootScope) {
         this.$rootScope = $rootScope;
     }
@@ -24,7 +25,8 @@ class ObvHelperService {
 
     vid() {
         let ums = this.userSessionManagerService();
-        return ums.vid() || $window.appConfig['vid'];
+        let jwtData = ums.jwtUtilService.getDecodedToken() || {};
+        return jwtData.viewId || $window.appConfig['vid'];
     }
 }
 

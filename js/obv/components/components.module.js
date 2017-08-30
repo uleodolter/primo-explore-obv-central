@@ -4,9 +4,11 @@
  */
 
 import ObvThumbnailLinksModule from './thumbnail-links/thumbnail-links.module';
+import ObvWikipediaModule from './wikipedia/wikipedia.module';
 
 export const ObvComponentsModule = angular
     .module('obvComponents', [
-        ObvThumbnailLinksModule
+        ObvThumbnailLinksModule,
+        ObvWikipediaModule,
     ])
     .name;
