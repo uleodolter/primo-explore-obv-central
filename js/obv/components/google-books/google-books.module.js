@@ -10,9 +10,8 @@ export const ObvGoogleBooksModule = angular
         .provider('obvGoogleBooks', ObvGoogleBooksProvider)
         .component(ObvGoogleBooksComponent.selector, ObvGoogleBooksComponent)
         .config([ '$sceDelegateProvider', 'obvGoogleBooksProvider', ($sceDelegateProvider, obvGoogleBooksProvider) => {
-            let urlWhitelist = $sceDelegateProvider.resourceUrlWhitelist();
-            urlWhitelist.push( obvGoogleBooksProvider.$get().getConfig().books_url );
-            $sceDelegateProvider.resourceUrlWhitelist(urlWhitelist);
+            let whitelist = $sceDelegateProvider.resourceUrlWhitelist();
+            $sceDelegateProvider.resourceUrlWhitelist( whitelist.concat( obvGoogleBooksProvider.$get().getConfig().books_url ) );
         }])
         .name;
 

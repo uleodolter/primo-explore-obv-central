@@ -10,10 +10,11 @@ export const ObvWikipediaModule = angular
         .provider('obvWikipedia', ObvWikipediaProvider)
         .component(ObvWikipediaComponent.selector, ObvWikipediaComponent)
         .config([ '$sceDelegateProvider', 'obvWikipediaProvider', ($sceDelegateProvider, obvWikipediaProvider) => {
-            let urlWhitelist = $sceDelegateProvider.resourceUrlWhitelist();
-            urlWhitelist.push( obvWikipediaProvider.$get().getConfig().wiki_url );
-            urlWhitelist.push( obvWikipediaProvider.$get().getConfig().isbn_url );
-            $sceDelegateProvider.resourceUrlWhitelist(urlWhitelist);
+            let whitelist = $sceDelegateProvider.resourceUrlWhitelist();
+            $sceDelegateProvider.resourceUrlWhitelist( whitelist.concat([
+                obvWikipediaProvider.$get().getConfig().wiki_url,
+                obvWikipediaProvider.$get().getConfig().isbn_url,
+            ]));
         }])
         .name;
 
