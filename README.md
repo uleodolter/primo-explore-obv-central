@@ -4,7 +4,23 @@ A Primo New UI customization package by OBVSG.
 
 ## General notes
 
-This is WORK IN PROGRESS.
+This package is a proof of concept howto implement a modular and flexible central package for the Primo New UI.
+
+The current functionality is based on three packages:
+
+- https://github.com/uleodolter/primo-explore-thumbnail-links-demo
+- https://github.com/uleodolter/primo-explore-wikipedia-demo
+- https://github.com/uleodolter/primo-explore-gbs-preview-demo
+
+These have been presented on the Primo New UI Hackathon/Virtual Conference, Dec.12-Dec.16 2016.
+
+- https://github.com/uleodolter/primo-new-ui-hackathon
+
+The new implemenation tries follow multiple Angular ES6 style guides.  Code is organized in tree structure,
+each component in it's own folder, Angular entities (module,component,provider,service,template,...) are separated in files.
+Browserify is used do resolved dependencies. 
+
+It is planned to enhance current compoment, add more functionality and install this package on a multitenant consortial Primo instance.
 
 ## Installation
 
