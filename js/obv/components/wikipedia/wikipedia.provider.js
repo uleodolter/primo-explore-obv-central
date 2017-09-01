@@ -12,7 +12,7 @@ class ObvWikipediaProvider {
     }
     setConfig(value) {
         if ( (value !== null) && (typeof value === 'object') ) {
-            Object.assign(this.config, value);
+            angular.merge(this.config, value);
         }
     }
     $get() {
