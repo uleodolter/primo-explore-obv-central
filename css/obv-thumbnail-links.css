@@ -5,3 +5,10 @@
     margin: 0.5em 0;
     text-align: center;
 }
+
+.obv-thumbnail-links .md-button {
+    width: 60px;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+}
