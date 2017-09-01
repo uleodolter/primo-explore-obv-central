@@ -8,7 +8,7 @@ const ObvGoogleBooksComponent = {
     selector: 'obvGoogleBooks',
     require: { prmFullViewAfter: '^prmFullViewAfter' },
     controller,
-    templateUrl: 'google-books.html',
+    templateUrl: 'obv-google-books.html',
 };
 
 export default ObvGoogleBooksComponent;

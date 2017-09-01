@@ -8,7 +8,7 @@ const ObvThumbnailLinksComponent = {
     selector: 'prmSearchResultThumbnailContainerAfter',
     controller,
     bindings: {parentCtrl: '<'},
-    templateUrl: 'thumbnail-links.html',
+    templateUrl: 'obv-thumbnail-links.html',
 };
 
 export default ObvThumbnailLinksComponent;
