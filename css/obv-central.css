@@ -1,12 +1,40 @@
 /* obv-central.css */
 
+/*** General changes for OBV CENTRAL PACKAGE ***/
+
+/* Distance of prm-full-view to prm-full-view-after */
+
+.__gt-sm .full-view-inner-container {
+    padding-bottom: 2em;
+}
+
+/* Widths and whitespaces of prm-full-view-after */
+
+.__xl prm-full-view-after .full-view-section {
+    width: 70%;
+}
+.__lgPlus prm-full-view-after .full-view-section {
+    width: 75%;
+}
+.__lg prm-full-view-after .full-view-section {
+    width: 80%;
+}
+
+.__gt-xs prm-full-view-after .full-view-section{
+    padding-right: 3em;
+}
+
+.__xs prm-full-view-after .full-view-section {
+    padding: 1em 1.5em;
+}
+
 prm-full-view-after .full-view-section {
     margin-top: 0em;
     padding-left: 3em;
     padding-bottom: 5em;
 }
 
-/* Color correction for prmFullViewAfter */
+/* Color correction for prm-full-view-after */
 
 prm-full-view-after .full-view-section {
     background-color: #F3F3F3;
