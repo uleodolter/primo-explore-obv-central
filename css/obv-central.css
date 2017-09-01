@@ -1,0 +1,13 @@
+/* obv-central.css */
+
+prm-full-view-after .full-view-section {
+    margin-top: 0em;
+    padding-left: 3em;
+    padding-bottom: 5em;
+}
+
+/* Color correction for prmFullViewAfter */
+
+prm-full-view-after .full-view-section {
+    background-color: #F3F3F3;
+}
