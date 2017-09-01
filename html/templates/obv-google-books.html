@@ -1,23 +1,17 @@
 <div class="full-view-section obv-google-books" ng-if="$ctrl.books.length > 0">
-    <div class="full-view-section-content">
-        <div>
-            <div class="section-head">
-                <div layout="row" layout-align="center center" class="layout-align-center-center layout-row">
-                    <h2 class="section-title md-title light-text">Google Books Preview</h2>
-                    <md-divider flex></md-divider>
-               </div>
+    <div class="layout-full-width full-view-section-content">
+        <div class="section-head">
+            <div layout="row" layout-align="center center" class="layout-align-center-center layout-row">
+                <h2 class="section-title md-title light-text">Google Books Preview</h2>
+                <md-divider flex></md-divider>
             </div>
-            <div class="section-body">
-                <div class="spaced-rows">
-                     <div style="padding-top:1em;" ng-repeat="book in $ctrl.books">
-                         <div class="obv-google-books book">
-                            <img ng-src="{{book.thumbnail_url}}"/>
-                            <a ng-href="{{book.preview_url}}" target="_blank">
-                                <img ng-src="https://www.google.com/intl/{{$ctrl.lang}}/googlebooks/images/gbs_preview_button1.gif" border="0" style="margin-left: 0.5em" />
-                            </a>
-                         </div>
-                     </div>
-                </div>
+        </div>
+        <div class="section-body">
+            <div class="obv-google-books book" ng-repeat="book in $ctrl.books">
+                <img ng-src="{{book.thumbnail_url}}"/>
+                <a ng-href="{{book.preview_url}}" target="_blank">
+                    <img ng-src="https://www.google.com/intl/{{$ctrl.lang}}/googlebooks/images/gbs_preview_button1.gif" border="0"/>
+                </a>
             </div>
         </div>
     </div>

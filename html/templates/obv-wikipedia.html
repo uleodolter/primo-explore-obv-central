@@ -1,56 +1,45 @@
 <div class="full-view-section obv-wikipedia" ng-if="$ctrl.pnds.length > 0">
     <div class="layout-full-width full-view-section-content">
-        <div>
-            <div class="section-head">
-                <div layout="row" layout-align="center center" class="layout-align-center-center layout-row">
-                    <h2 class="section-title md-title light-text">Wikipedia</h2>
-                    <md-divider flex></md-divider>
-               </div>
+        <div class="section-head">
+            <div layout="row" layout-align="center center" class="layout-align-center-center layout-row">
+                <h2 class="section-title md-title light-text">Wikipedia</h2>
+                <md-divider flex></md-divider>
             </div>
         </div>
-        <div class="section-body">
-            <div class="spaced-rows">
-                 <div style="padding-top:1em;" ng-repeat="pnd in $ctrl.wikipedia_data.pnds">
-                     <div><span class="bold-text">Mehr über ... {{pnd.author}}</span></div>
-                     <div>
-                        {{pnd.abstract}} ...
-                        <a class="arrow-link" href="{{pnd.wiki_url}}" target="_blank">
-
-                            <span ng-if="pnd.wiki_url.length>0">weiterlesen</span>
-
-                                <prm-icon ng-if="pnd.wiki_url.length>0" external-link
-                                    icon-type="svg"
-                                    svg-icon-set="primo-ui"
-                                    icon-definition="open-in-new">
-                                </prm-icon>
-
-                                <prm-icon ng-if="pnd.wiki_url.length>0" link-arrow
-                                      icon-type="svg"
-                                      svg-icon-set="primo-ui"
-                                      icon-definition="chevron-right">
-                               </prm-icon>
-
-                        </a>
-
-                     </div>
-                 </div>
-                 <div style="padding-top:1em;" ng-if="$ctrl.seealso_data.length > 0">
-                     <div><span class="bold-text">Relevante Wikipedia-Artikel zum Buch mit ISBN {{$ctrl.isbns[0]}}</span></div>
-                     <div ng-repeat="link in $ctrl.seealso_data[3]">
-                        <a class="arrow-link" href="{{link}}" target="_blank">{{$ctrl.seealso_data[2][$index]}}</a>
-                            <prm-icon external-link
-                                icon-type="svg"
-                                svg-icon-set="primo-ui"
-                                icon-definition="open-in-new">
-                            </prm-icon>
-
-                            <prm-icon link-arrow
-                                  icon-type="svg"
-                                  svg-icon-set="primo-ui"
-                                  icon-definition="chevron-right">
-                           </prm-icon>
-                     </div>
-                 </div>
+        <div class="section-body" ng-repeat="pnd in $ctrl.wikipedia_data.pnds">
+            <h4>{{pnd.author}}</h4>
+            <p>
+                {{pnd.abstract}} ...
+                <a class="arrow-link" href="{{pnd.wiki_url}}" target="_blank">
+                    <span ng-if="pnd.wiki_url.length>0">weiterlesen</span>
+                    <prm-icon ng-if="pnd.wiki_url.length>0" external-link
+                        icon-type="svg"
+                        svg-icon-set="primo-ui"
+                        icon-definition="open-in-new">
+                    </prm-icon>
+                    <prm-icon ng-if="pnd.wiki_url.length>0" link-arrow
+                        icon-type="svg"
+                        svg-icon-set="primo-ui"
+                        icon-definition="chevron-right">
+                    </prm-icon>
+                </a>
+            </p>
+        </div>
+        <div ng-if="$ctrl.seealso_data.length > 0">
+            <h4>Relevante Wikipedia-Artikel zum Buch mit ISBN {{$ctrl.isbns[0]}}</h4>
+            <div ng-repeat="link in $ctrl.seealso_data[3]">
+                <a class="arrow-link" href="{{link}}" target="_blank">{{$ctrl.seealso_data[2][$index]}}
+                    <prm-icon external-link
+                        icon-type="svg"
+                        svg-icon-set="primo-ui"
+                        icon-definition="open-in-new">
+                    </prm-icon>
+                    <prm-icon link-arrow
+                        icon-type="svg"
+                        svg-icon-set="primo-ui"
+                        icon-definition="chevron-right">
+                    </prm-icon>
+                </a>
             </div>
         </div>
     </div>
