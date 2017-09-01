@@ -8,7 +8,7 @@ const ObvWikipediaComponent = {
     selector: 'obvWikipedia',
     require: { prmFullViewAfter: '^prmFullViewAfter' },
     controller,
-    templateUrl: 'wikipedia.html',
+    templateUrl: 'obv-wikipedia.html',
 };
 
 export default ObvWikipediaComponent;
